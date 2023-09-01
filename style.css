@@ -1,0 +1,146 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  background-color: #374151;
+}
+button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container {
+  margin: 50px auto 0;
+  max-width: 60%;
+}
+.container h1 {
+  color: #6b7280;
+  font-weight: 300;
+  margin-bottom: 15px;
+  font-size: 35px;
+}
+.container .add-task {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+.container .add-task input {
+  flex: 1;
+  background-color: #1f2937;
+  border: none;
+  outline: none;
+  padding: 15px;
+  border-radius: 15px;
+  color: white;
+}
+.container .add-task input::placeholder {
+  color: #6b7280;
+}
+.container .add-task button {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ec4899;
+  background-image: linear-gradient(120deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: .5s;
+}
+.container .tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .tasks h3 {
+  font-size: 20px;
+  color: #6b7280;
+  font-weight: 300;
+}
+.container .tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111827;
+  padding: 15px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.container .tasks .task p {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+.container .tasks .task .buttons {
+  display: flex;
+  gap: 15px;
+}
+.container .tasks .task .buttons button:first-of-type {
+  color: #ec4899;
+  background-image: linear-gradient(120deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.container .tasks .task .buttons button:last-of-type {
+  color: crimson;
+  z-index: 1;
+}
+.container .tasks .task .edit {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #111827;
+  padding: 15px;
+  gap: 15px;
+}
+.container .tasks .task .edit input {
+  border: none;
+  outline: none;
+  background: none;
+  color: #ec4899;
+  background-image: linear-gradient(120deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 15px;
+  font-weight: 700;
+  flex: 1;
+}
+.container .tasks .task .edit button {
+  color: #ec4899;
+  background-image: linear-gradient(120deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  position: relative;
+  right: 65px;
+}
+@media (max-width: 550px) {
+  .container {
+    width: calc(100% - 40px);
+    max-width: none;
+  }
+  .container .add-task button {
+    font-size: 14px;
+  }
+  .container .tasks .task {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .container .tasks .task .edit {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .container .tasks .task .edit button {
+    right: 35px;
+  }
+}
